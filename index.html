@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restuarant Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap'); </style>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, .nav-link{
+            background-color: black;
+            color: white;
+        }
+        .nav-link:hover{
+            color: gold;
+        }
+        body{
+            box-sizing: border-box;
+        }
+        .text{
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            color: white;
+        }
+        .navbar-brand {
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            box-sizing: border-box;
+        }
+        .yellow{
+            background-color: gold;
+            color: black;
+        }
+        .yellow:hover{
+            background-color: rgb(80, 69, 28);
+            color: white;
+        }
+
+        .img-fluid {
+            height: 25vh;
+        }
+
+        .bi {
+            border-radius: 20px;
+        }
+
+        .mb-3 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        .lead{
+            font-family: 'Philosopher', sans-serif;
+            font-size : 1rem;
+        }
+        .name{
+            font-family: 'Philosopher', sans-serif;
+            font-size : 2.25rem;
+            font-weight: bold;
+        }
+
+        .modal-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: white;  
+        }
+        .img1{
+            border-radius: 30rem;
+        }
+        .navbar-brand,.navbar-brand:hover{
+            color: gold;
+        }
+        h6{
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+        }
+        .team-image{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container1{
+            margin-top: 6rem;
+        }
+        .modal-content{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid active">
+            <img src="./nav2.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top bg-dark bi">
+            <a class="navbar-brand" href="/">OLIVE GREENS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="about.html">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn yellow" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn yellow" data-bs-toggle="modal" data-bs-target="#SignUpModal">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- login modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="loginModalLabel"><b> FOOD IS WAITING FOR YOU .</b></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignUp modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="SignUpModalLabel"> <b>
+                            HURRY UP! TO ENJOY FOOD . </b></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputcPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputcPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel -->
+
+    <div id="carouselExampleIndicators" class="carousel slide my-1" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner carousel slide carousel-fade">
+            <div class="carousel-item active">
+                <img src="./food2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./food3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./food4.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- MAIN DATA -->
+    <section class="pt-7 pt-md-9 my-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+
+                    <!-- Divider -->
+                    <hr class="hr-sm bg-primary">
+
+                    <!-- Text -->
+                    <p class="fs-lg lh-lg text-black mb-5 mb-md-0">
+                        When you feel Hungry just Come.
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+
+                    <!-- Media -->
+                    <div class="media-decoration media-decoration-1 mb-5 mb-md-0">
+
+                        <!-- Border -->
+                        <div class="media-decoration-border" data-jarallax-element="-40"
+                            style="transform: translate3d(0px, 7.35235px, 0px);">
+                            <div id="jarallax-container-1"
+                                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;">
+                                <div
+                                    style="pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; position: fixed;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <img class="media-decoration-img img-fluid " src="./mainpart2.jpg" alt="...">
+
+                    </div>
+
+                </div>
+                <div class="col-md-5 align-self-center mx-auto">
+
+                    <!-- Heading -->
+                    <h2 class="mb-2">
+                        <em>Welcome to OLIVE GREENS </em>
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="mb-0">
+                        Enjoy luscious global cuisines and taste flavors from all around the Mediterranean region!
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Part -->
+
+    <section class="py-7 py-md-9 my-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 order-md-2 align-self-end">
+
+                    <!-- Divider -->
+                    <hr class="hr-sm bg-primary">
+
+                    <!-- Text -->
+                    <p class="fs-lg lh-lg text-black mb-5 mb-md-0">
+                        Great variety of foods you will enjoy.
+                    </p>
+
+                </div>
+                <div class="col-md-4 order-md-3">
+
+                    <!-- Media -->
+                    <div class="media-decoration media-decoration-1 mb-5 mb-md-0">
+
+                        <!-- Solid -->
+                        <div class="media-decoration-solid" data-jarallax-element="-40"
+                            style="transform: translate3d(0px, -46.3901px, 0px);">
+                            <div id="jarallax-container-2"
+                                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;">
+                                <div
+                                    style="pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; position: fixed;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Border -->
+                        <div class="media-decoration-border" data-jarallax-element="-40"
+                            style="transform: translate3d(0px, -37.1116px, 0px);">
+                            <div id="jarallax-container-3"
+                                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;">
+                                <div
+                                    style="pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; position: fixed;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <img class="media-decoration-img img-fluid" src="./mainpart1.jpg" alt="...">
+
+                    </div>
+
+                </div>
+                <div class="col-md-5 order-md-1 align-self-center mx-auto">
+
+                    <!-- Heading -->
+                    <h2 class="mb-2">
+                        <em>
+                            Your culinary adventure awaits</em>
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="mb-0">
+                        Truly authentic Mediterranean food made with the freshest and finest ingredients
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- third part -->
+
+    <section class="module">
+        <div class="container1">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1 class="name my-2">MEET OUR CHEFS.</h1>
+                    <p class="lead">Twelve-years of culinary excellence! They are Happy to serve you a delicious Food! </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-my="60px" style="margin-top: 60px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image"><img src="./person4.jpg" alt="" class="img1 img-fluid">
+                            <div class="team-wrap">
+                                <div class="team-content">
+                                    <h6 class="team-name">Noah Connor</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image"><img src="./person2.jpg" alt="" class="img1 img-fluid">
+                            <div class="team-wrap">
+                                <div class="team-content">
+                                    <h6 class="team-name">Richard Bauer</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image"><img src="./person3.jpg" alt="" class="img1 img-fluid"> 
+                            <div class="team-wrap">
+                                <div class="team-content">
+                                    <h6 class="team-name ">Lili Edward</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+
+    <div class="container my-1">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top ">
+            <p class="col-md-4 mb-0 text"> OLIVE GREENS © CopyRights , pvt . Ltd .</p>
+            <!-- social media -->
+            <ul class="list-unstyled d-flex ">
+                <a class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+                    href="https://twitter.com/maffeikitchen/" target="_blank">
+                    <img class="bi me-2" width="40" height="40" src="./nav2.jpg" alt="">
+                </a>
+
+
+        </footer>
+    </div>
+</body>
+
+</html>
